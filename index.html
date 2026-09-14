@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#172b25">
+  <title>Cerne — uma árvore de cada vez</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game" aria-label="Cerne, protótipo de cortar madeira">
+    <canvas id="forest" tabindex="0" aria-label="Use WASD ou as setas para andar. Segure e solte espaço ou o botão esquerdo do mouse para golpear."></canvas>
+    <div class="vignette"></div>
+    <header>
+      <div class="brand"><div class="eyebrow"><span></span> PROTÓTIPO JOGÁVEL · 01</div><h1>CERNE<span>✳</span></h1><p>Uma árvore de cada vez.</p></div>
+      <div class="tools"><button id="sound" aria-label="Desativar som" title="Som (M)">♫ <span>SOM ATIVO</span></button><button id="pause" aria-label="Pausar" title="Pausar (Esc)">Ⅱ</button></div>
+    </header>
+    <aside class="tally"><span class="small">ÁRVORES DERRUBADAS</span><div><span id="count">00</span><svg viewBox="0 0 32 32" width="29" aria-hidden="true"><path d="M16 3 7 16h5L5 24h9v6h4v-6h9l-7-8h5Z" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></div><span id="best">Encontre o seu ritmo.</span></aside>
+    <div class="event" id="event" aria-live="polite"></div>
+    <footer>
+      <div class="location"><span class="sun">☼</span><div><span class="small">A CLAREIRA</span><p>O bosque respira. Você também.</p></div></div>
+      <div class="controls"><div><kbd>W A S D</kbd><span>mover</span></div><i></i><div><kbd>ESPAÇO</kbd><span>segure e solte para cortar</span></div><i></i><div class="mouse-hint"><span class="mouse-icon"></span><span>também funciona</span></div></div>
+      <div class="hint" id="hint">Aproxime-se do tronco para começar.</div>
+    </footer>
+    <div id="overlay" hidden><div class="pause-card"><span class="small">UM RESPIRO</span><h2>O bosque espera.</h2><p>Volte quando quiser.</p><button id="resume">Continuar <span>↗</span></button><span class="pause-tip">ESC PARA VOLTAR</span></div></div>
+    <div class="touch" aria-label="Controles de toque"><div class="dpad"><button data-key="ArrowUp" aria-label="Andar para cima">↑</button><button data-key="ArrowLeft" aria-label="Andar para esquerda">←</button><button data-key="ArrowDown" aria-label="Andar para baixo">↓</button><button data-key="ArrowRight" aria-label="Andar para direita">→</button></div><button id="chop">MACHADO</button></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
